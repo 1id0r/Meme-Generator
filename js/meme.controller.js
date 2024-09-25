@@ -34,14 +34,13 @@ function renderMeme() {
 function onTextInput(text) {
   const meme = getMeme()
   meme.lines[meme.selectedLineIdx - 1].txt = text
+
   console.log('memme', meme)
   renderMeme()
 }
 
 function onSelectImg(imgElement) {
-  const imgId = +imgElement.dataset.id // Use the dataset property to access data-id
-  console.log('imgId', imgId)
-  const meme = getMeme()
-  meme.selectedImgId = imgId // Set the selected image ID
-  renderMeme() // Re-render the meme
+  const imgId = +imgElement.dataset.id
+  setImg(imgId)
+  renderMeme()
 }

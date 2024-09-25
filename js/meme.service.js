@@ -18,3 +18,6 @@ let gMeme = {
 function getMeme() {
   return gMeme
 }
+function setImg(id) {
+  gMeme.selectedImgId = id
+}
