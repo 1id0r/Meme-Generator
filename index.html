@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<body>
+<body onload="onInit()">
     <header class="main-header">
         <section class="flex space-between">
             <div class="logo">memegen</div>
@@ -21,27 +21,33 @@
         </section>
     </header>
     <section class="grid-container">
-        <img src="./img/1.jpg" alt="">
-        <img src="./img/2.jpg" alt="">
-        <img src="./img/3.jpg" alt="">
-        <img src="./img/4.jpg" alt="">
-        <img src="./img/5.jpg" alt="">
-        <img src="./img/6.jpg" alt="">
-        <img src="./img/7.jpg" alt="">
-        <img src="./img/8.jpg" alt="">
-        <img src="./img/9.jpg" alt="">
-        <img src="./img/10.jpg" alt="">
-        <img src="./img/11.jpg" alt="">
-        <img src="./img/12.jpg" alt="">
-        <img src="./img/13.jpg" alt="">
-        <img src="./img/14.jpg" alt="">
-        <img src="./img/15.jpg" alt="">
-        <img src="./img/16.jpg" alt="">
-        <img src="./img/17.jpg" alt="">
-        <img src="./img/18.jpg" alt="">
+        <img src="./img/1.jpg" onclick="onSelectImg(this)" alt="">
+        <img src="./img/2.jpg" onclick="onSelectImg(this)" alt="">
+        <img src="./img/3.jpg" onclick="onSelectImg(this)" alt="">
+        <img src="./img/4.jpg" onclick="onSelectImg(this)" alt="">
+        <img src="./img/5.jpg" onclick="onSelectImg(this)" alt="">
+        <!-- <img src="./img/6.jpg" onclick="onSelectImg(this)" alt="">
+        <img src="./img/7.jpg" onclick="onSelectImg(this)" alt="">
+        <img src="./img/8.jpg" onclick="onSelectImg(this)" alt="">
+        <img src="./img/9.jpg" onclick="onSelectImg(this)" alt="">
+        <img src="./img/10.jpg" onclick="onSelectImg(this)" alt="">
+        <img src="./img/11.jpg" onclick="onSelectImg(this)" alt="">
+        <img src="./img/12.jpg" onclick="onSelectImg(this)" alt="">
+        <img src="./img/13.jpg" onclick="onSelectImg(this)" alt="">
+        <img src="./img/14.jpg" onclick="onSelectImg(this)" alt="">
+        <img src="./img/15.jpg" onclick="onSelectImg(this)" alt="">
+        <img src="./img/16.jpg" onclick="onSelectImg(this)" alt="">
+        <img src="./img/17.jpg" onclick="onSelectImg(this)" alt="">
+        <img src="./img/18.jpg" onclick="onSelectImg(this)" alt=""> -->
     </section>
-    <section class="editor-container"></section>
+    <section class="editor-container">
+        <canvas class="canvas" width="500" height="500"></canvas>
+        <input type="text" class="meme-text" placeholder="enter your meme text">
+    </section>
     <footer class="main-footer"></footer>
+
+    <script src="/js/meme.controller.js"></script>
+    <script src="/js/meme.service.js"></script>
 
 
 </body>
