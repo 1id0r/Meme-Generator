@@ -1,0 +1,5 @@
+.main-header {
+    height: 70px;
+    padding: 10px 20px;
+    background-color: var(--clr-primary-1);
+}
