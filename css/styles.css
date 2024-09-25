@@ -1,5 +1,5 @@
 /* Setup */
-@import url(/css/setup/vars.css);
+@import url(./css/setup/vars.css);
 /* BASICS */
 @import url('./basics/base.css');
 @import url('./basics/helpers.css');
