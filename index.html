@@ -21,28 +21,28 @@
         </section>
     </header>
     <section class="grid-container">
-        <img src="./img/1.jpg" onclick="onSelectImg(this)" alt="">
-        <img src="./img/2.jpg" onclick="onSelectImg(this)" alt="">
-        <img src="./img/3.jpg" onclick="onSelectImg(this)" alt="">
-        <img src="./img/4.jpg" onclick="onSelectImg(this)" alt="">
-        <img src="./img/5.jpg" onclick="onSelectImg(this)" alt="">
-        <!-- <img src="./img/6.jpg" onclick="onSelectImg(this)" alt="">
-        <img src="./img/7.jpg" onclick="onSelectImg(this)" alt="">
-        <img src="./img/8.jpg" onclick="onSelectImg(this)" alt="">
-        <img src="./img/9.jpg" onclick="onSelectImg(this)" alt="">
-        <img src="./img/10.jpg" onclick="onSelectImg(this)" alt="">
-        <img src="./img/11.jpg" onclick="onSelectImg(this)" alt="">
-        <img src="./img/12.jpg" onclick="onSelectImg(this)" alt="">
-        <img src="./img/13.jpg" onclick="onSelectImg(this)" alt="">
-        <img src="./img/14.jpg" onclick="onSelectImg(this)" alt="">
-        <img src="./img/15.jpg" onclick="onSelectImg(this)" alt="">
-        <img src="./img/16.jpg" onclick="onSelectImg(this)" alt="">
-        <img src="./img/17.jpg" onclick="onSelectImg(this)" alt="">
-        <img src="./img/18.jpg" onclick="onSelectImg(this)" alt=""> -->
+        <img src="img/1.jpg" data-id="1" onclick="onSelectImg(this)" alt="">
+        <img src="img/2.jpg" data-id="2" onclick="onSelectImg(this)" alt="">
+        <img src="img/3.jpg" data-id="3" onclick="onSelectImg(this)" alt="">
+        <img src="img/4.jpg" data-id="4" onclick="onSelectImg(this)" alt="">
+        <img src="img/5.jpg" data-id="5" onclick="onSelectImg(this)" alt="">
+        <!-- <img src="./img/6.jpg" data-id="6"onclick="onSelectImg(this)" alt="">
+        <img src="./img/7.jpg" data-id="7"onclick="onSelectImg(this)" alt="">
+        <img src="./img/8.jpg" data-id="8"onclick="onSelectImg(this)" alt="">
+        <img src="./img/9.jpg" data-id="9"onclick="onSelectImg(this)" alt="">
+        <img src="./img/10.jpg" data-id="10"onclick="onSelectImg(this)" alt="">
+        <img src="./img/11.jpg" data-id="11"onclick="onSelectImg(this)" alt="">
+        <img src="./img/12.jpg" data-id="12"onclick="onSelectImg(this)" alt="">
+        <img src="./img/13.jpg" data-id="13"onclick="onSelectImg(this)" alt="">
+        <img src="./img/14.jpg" data-id="14"onclick="onSelectImg(this)" alt="">
+        <img src="./img/15.jpg" data-id="15"onclick="onSelectImg(this)" alt="">
+        <img src="./img/16.jpg" data-id="16"onclick="onSelectImg(this)" alt="">
+        <img src="./img/17.jpg" data-id="17"onclick="onSelectImg(this)" alt="">
+        <img src="./img/18.jpg" data-id="18"onclick="onSelectImg(this)" alt=""> -->
     </section>
     <section class="editor-container">
         <canvas class="canvas" width="500" height="500"></canvas>
-        <input type="text" class="meme-text" placeholder="enter your meme text">
+        <input type="text" class="meme-text" placeholder="enter your meme text" oninput="onTextInput(this.value)">
     </section>
     <footer class="main-footer"></footer>
 

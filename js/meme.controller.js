@@ -10,21 +10,34 @@ function onInit() {
 }
 
 function renderMeme() {
-  const imgSrc = 'img/2.jpg'
-  const memeText = 'I sometimes eat Falafel'
-  const textSize = 40
-  const textColor = 'red'
-  const img = new Image()
-  img.src = imgSrc
+  const meme = getMeme()
+  const img = gImgs.find((img) => img.id === meme.selectedImgId)
+  const elImage = new Image()
+  elImage.src = img.url
+  elImage.onload = function () {
+    gElCanvas.width = elImage.width
+    gElCanvas.height = elImage.height
+    gCtx.drawImage(elImage, 0, 0, gElCanvas.width, gElCanvas.height)
+    meme.lines.forEach((line) => {
+      gCtx.font = `${line.size}px Arial`
+      gCtx.fillStyle = line.color
+      gCtx.textAlign = 'center'
 
-  img.onload = function () {
-    gElCanvas.width = img.width
-    gElCanvas.height = img.height
-    gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height)
-    gCtx.font = `${textSize}px Arial`
-    gCtx.fillStyle = textColor
-    gCtx.textAlign = 'center'
-
-    gCtx.fillText(memeText, gElCanvas.width / 2, 50)
+      gCtx.fillText(line.txt, gElCanvas.width / 2, line.y)
+    })
   }
+}
+
+function onTextInput(text) {
+  const meme = getMeme()
+  meme.lines[meme.selectedLineIdx - 1].txt = text
+  renderMeme()
+}
+
+function onSelectImg(imgElement) {
+  const imgId = +imgElement.dataset.id // Use the dataset property to access data-id
+  console.log('imgId', imgId)
+  const meme = getMeme()
+  meme.selectedImgId = imgId // Set the selected image ID
+  renderMeme() // Re-render the meme
 }

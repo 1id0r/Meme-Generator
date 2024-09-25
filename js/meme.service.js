@@ -10,6 +10,10 @@ const gImgs = [
 
 let gMeme = {
   selectedImgId: 1,
-  selectedLineIdx: 0,
-  lines: [{ txt: 'Enter your text', size: 20, color: 'red' }],
+  selectedLineIdx: 1,
+  lines: [{ txt: 'hello', size: 20, color: 'red', x: 0, y: 50 }],
+}
+
+function getMeme() {
+  return gMeme
 }
