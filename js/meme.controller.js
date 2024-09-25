@@ -10,7 +10,7 @@ function onInit() {
 }
 
 function renderMeme() {
-  const imgSrc = 'img/1.jpg'
+  const imgSrc = 'img/2.jpg'
   const memeText = 'I sometimes eat Falafel'
   const textSize = 40
   const textColor = 'red'
