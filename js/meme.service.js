@@ -6,6 +6,7 @@ const gImgs = [
   { id: 3, url: 'img/3.jpg', keywords: ['baby', 'funny'] },
   { id: 4, url: 'img/4.jpg', keywords: ['baby', 'funny'] },
   { id: 5, url: 'img/5.jpg', keywords: ['baby', 'funny'] },
+  { id: 6, url: 'img/6.jpg', keywords: ['baby', 'funny'] },
 ]
 
 let gMeme = {

@@ -6,8 +6,11 @@ var gCtx
 function onInit() {
   gElCanvas = document.querySelector('canvas')
   gCtx = gElCanvas.getContext('2d')
+  renderGallery()
   renderMeme()
 }
+
+function renderGallery() {}
 
 function renderMeme() {
   const meme = getMeme()
@@ -31,6 +34,7 @@ function renderMeme() {
 function onTextInput(text) {
   const meme = getMeme()
   meme.lines[meme.selectedLineIdx - 1].txt = text
+  console.log('memme', meme)
   renderMeme()
 }
 
