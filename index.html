@@ -9,7 +9,7 @@
 </head>
 
 <body onload="onInit()">
-    <header class="main-header">
+    <header class="main-header ">
         <section class="flex space-between">
             <div class="logo">memegen</div>
             <nav class="main-nav">
@@ -20,12 +20,19 @@
             </nav>
         </section>
     </header>
-    <section class="grid-container">
+
+    <section class="gallery-container">
+        <div class="grid-container"></div>
     </section>
-    <section class="editor-container">
-        <canvas class="canvas" width="500" height="500"></canvas>
-        <input type="text" class="meme-text" placeholder="enter your meme text" oninput="onTextInput(this.value)">
+
+    <section class="editor hidden">
+        <div class="editor-container">
+            <button onclick="onBackToGallery()">Back to Gallery</button>
+            <canvas class="canvas" width="500" height="500"></canvas>
+            <input type="text" class="meme-text" placeholder="enter your meme text" oninput="onTextInput(this.value)">
+        </div>
     </section>
+
     <footer class="main-footer"></footer>
 
     <script src="./js/meme.controller.js"></script>

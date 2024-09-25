@@ -43,4 +43,10 @@ function onSelectImg(imgElement) {
   const imgId = +imgElement.dataset.id
   setImg(imgId)
   renderMeme()
+  document.querySelector('.gallery-container').classList.add('hidden')
+  document.querySelector('.editor').classList.remove('hidden')
+}
+function onBackToGallery() {
+  document.querySelector('.editor').classList.add('hidden')
+  document.querySelector('.gallery-container').classList.remove('hidden')
 }
