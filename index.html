@@ -25,13 +25,20 @@
         <div class="grid-container"></div>
     </section>
 
-    <section class="editor hidden">
+    <div class="editor hidden">
         <div class="editor-container">
-            <button onclick="onBackToGallery()">Back to Gallery</button>
-            <canvas class="canvas" width="500" height="500"></canvas>
-            <input type="text" class="meme-text" placeholder="enter your meme text" oninput="onTextInput(this.value)">
+            <button class="close-btn" onclick="onBackToGallery()">×</button>
+            <div class="canvas-container">
+                <canvas class="canvas" width="500" height="500"></canvas>
+            </div>
+            <div class="forms-control">
+                <input type="text" class="meme-text" placeholder="enter your meme text"
+                    oninput="onTextInput(this.value)">
+                <button class="download-btn" onclick="downloadCanvas(this)">download</button>
+
+            </div>
         </div>
-    </section>
+    </div>
 
     <footer class="main-footer"></footer>
 

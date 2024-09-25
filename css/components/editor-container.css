@@ -1,11 +1,86 @@
+/* Ensure the editor container takes up space equally between canvas and form */
+/* Styling for the editor container to make it a flexbox layout */
 .editor-container {
     display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
+    justify-content: space-between;
+    /* Align the canvas and form controls */
+    padding: 20px;
 }
 
-.canvas {
-    margin-bottom: 20px auto;
+/* Canvas container will hold the canvas */
+.canvas-container {
+    flex: 1;
+    /* Take available space */
+}
 
+/* Form controls container */
+.form-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Align form controls from top */
+    gap: 10px;
+    /* Add space between controls */
+    padding-left: 20px;
+    max-width: 300px;
+    /* Restrict the width of form controls */
+}
+
+/* Additional styling for inputs */
+input.meme-text {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Canvas */
+.canvas {
+    border: 1px solid #ccc;
+}
+
+.close-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--clr-primary-1);
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+    transform: scale(1.2);
+}
+
+.close-btn:focus {
+    outline: none;
+}
+
+.close-btn:active {
+    transform: scale(1.1);
+}
+
+.download-btn {
+    background-color: var(--clr-primary-1);
+    /* Soft orange color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #E76F51;
+    /* Darken on hover */
+}
+
+.download-btn:focus {
+    outline: none;
 }
