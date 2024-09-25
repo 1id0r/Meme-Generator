@@ -1,1 +1,1 @@
-meme genrator game using vanilla JS
+Meme Generator game using vanilla JS
