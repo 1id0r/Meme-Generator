@@ -13,8 +13,7 @@ function renderMeme() {
   const imgSrc = 'img/1.jpg'
   const memeText = 'I sometimes eat Falafel'
   const textSize = 40
-  const textColor = 'red'
-
+  const textColor = 'red'console.log('hh', );
   const img = new Image()
   img.src = imgSrc
 
