@@ -1,7 +1,9 @@
 .main-header {
-    position: fixed;
+    position: sticky;
+    inset: 0;
     width: 100%;
     height: 70px;
     padding: 10px 20px;
+    margin-bottom: 10px;
     background-color: var(--clr-primary-1);
 }
