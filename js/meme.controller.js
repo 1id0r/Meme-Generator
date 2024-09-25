@@ -31,14 +31,6 @@ function renderMeme() {
   }
 }
 
-function onTextInput(text) {
-  const meme = getMeme()
-  meme.lines[meme.selectedLineIdx - 1].txt = text
-
-  console.log('memme', meme)
-  renderMeme()
-}
-
 function onSelectImg(imgElement) {
   const imgId = +imgElement.dataset.id
   setImg(imgId)
@@ -49,4 +41,18 @@ function onSelectImg(imgElement) {
 function onBackToGallery() {
   document.querySelector('.editor').classList.add('hidden')
   document.querySelector('.gallery-container').classList.remove('hidden')
+}
+
+function onTextInput(text) {
+  const meme = getMeme()
+  meme.lines[meme.selectedLineIdx - 1].txt = text
+
+  console.log('memme', meme)
+  renderMeme()
+}
+function onColorChange(color) {
+  console.log('color', color)
+  const meme = getMeme()
+  meme.lines[meme.selectedLineIdx - 1].color = color
+  renderMeme()
 }
