@@ -1,45 +1,48 @@
-/* Ensure the editor container takes up space equally between canvas and form */
-/* Styling for the editor container to make it a flexbox layout */
 .editor-container {
     display: flex;
     justify-content: space-between;
-    /* Align the canvas and form controls */
     padding: 20px;
+    width: 100%;
 }
 
-/* Canvas container will hold the canvas */
 .canvas-container {
     flex: 1;
-    /* Take available space */
 }
 
-/* Form controls container */
-.form-controls {
+.forms-control {
     display: flex;
+    width: 50%;
     flex-direction: column;
-    justify-content: flex-start;
-    /* Align form controls from top */
+    justify-content: baseline;
     gap: 10px;
-    /* Add space between controls */
-    padding-left: 20px;
-    max-width: 300px;
-    /* Restrict the width of form controls */
+    padding: 10px;
+    margin-right: 100px;
+    margin-left: 10px;
+    border: 5px solid black;
+
+
+
 }
 
-/* Additional styling for inputs */
+
 input.meme-text {
     padding: 10px;
     font-size: 16px;
-    width: 100%;
     box-sizing: border-box;
+    width: 100%;
+
 }
 
-/* Canvas */
+
 .canvas {
     border: 1px solid #ccc;
 }
 
 .close-btn {
+    position: absolute;
+    top: 64px;
+    left: 10px;
+
     background-color: transparent;
     border: none;
     font-size: 2.5rem;
