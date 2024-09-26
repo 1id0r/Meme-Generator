@@ -1,0 +1,18 @@
+@media (max-width: 640px) {
+    .main-nav {
+        position: fixed;
+        background-color: var(--clr-primary-1);
+        top: 50px;
+        gap: 5px;
+        left: 0;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .main-nav-list {
+        flex-direction: row;
+        gap: 5px;
+    }
+
+
+}
