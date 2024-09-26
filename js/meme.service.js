@@ -13,8 +13,8 @@ let gMeme = {
   selectedImgId: 1,
   selectedLineIdx: 0,
   lines: [
-    { txt: 'hello', size: 30, color: 'black', x: 0, y: 50 },
-    { txt: 'hello', size: 30, color: 'black', x: 0, y: 400 },
+    { txt: 'hello', size: 30, color: 'white', x: 0, y: 50 },
+    { txt: 'hello', size: 30, color: 'white', x: 0, y: 450 },
   ],
 }
 var gKeywordSearchCountMap = { funny: 12, cat: 16, baby: 2 }

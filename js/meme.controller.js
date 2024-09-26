@@ -10,8 +10,6 @@ function onInit() {
   renderMeme()
 }
 
-function renderGallery() {}
-
 function renderMeme() {
   const meme = getMeme()
   const img = gImgs.find((img) => img.id === meme.selectedImgId)
@@ -22,16 +20,30 @@ function renderMeme() {
     gElCanvas.height = elImage.height
     gCtx.drawImage(elImage, 0, 0, gElCanvas.width, gElCanvas.height)
     meme.lines.forEach((line, idx) => {
-      gCtx.font = `${line.size}px Arial`
+      gCtx.font = `${line.size}px Impact`
       gCtx.fillStyle = line.color
-
-      if (idx === meme.selectedLineIdx) {
-        gCtx.lineWidth = 1
-        gCtx.strokeStyle = 'red'
-        gCtx.strokeText(line.txt, gElCanvas.width / 2, line.y)
-      }
       gCtx.textAlign = 'center'
+      gCtx.lineWidth = 3
+      gCtx.strokeStyle = 'black'
+
+      gCtx.strokeText(line.txt, gElCanvas.width / 2, line.y)
       gCtx.fillText(line.txt, gElCanvas.width / 2, line.y)
+
+      // draw the frame
+      if (idx === meme.selectedLineIdx) {
+        const textWidth = gCtx.measureText(line.txt).width
+        const textHeight = line.size
+        const padding = 10
+        const x = gElCanvas.width / 2 - textWidth / 2 - padding
+        const y = line.y - textHeight
+        const width = textWidth + padding * 2
+        const height = textHeight + padding
+
+        // Draw the frame (rectangle)
+        gCtx.strokeStyle = 'grey'
+        gCtx.lineWidth = 1
+        gCtx.strokeRect(x, y, width, height)
+      }
     })
   }
 }
@@ -54,7 +66,6 @@ function onTextInput(text) {
   renderMeme()
 }
 function onColorChange(color) {
-  console.log('color', color)
   const meme = getMeme()
   meme.lines[meme.selectedLineIdx].color = color
   renderMeme()
@@ -76,26 +87,11 @@ function decreaseFontSize() {
 
 function switchLine() {
   const meme = getMeme()
-  console.log('gMeme', gMeme)
-  console.log('gMeme', gMeme.selectedLineIdx)
   meme.selectedLineIdx += 1
-  if (meme.selectedLineIdx >= meme.lines.length) {
-    meme.selectedLineIdx = 0
-  }
-  console.log('meme.line[selectedLineIdx]', meme.lines[selectedLineIdx])
-  renderMeme()
-}
-
-function switchLine() {
-  const meme = getMeme()
-
-  meme.selectedLineIdx += 1
-
   if (meme.selectedLineIdx >= meme.lines.length) {
     meme.selectedLineIdx = 0
   }
   document.querySelector('.meme-text').value =
     meme.lines[meme.selectedLineIdx].txt
-
   renderMeme()
 }
