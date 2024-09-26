@@ -3,6 +3,7 @@
     /* font-family: ''; */
     color: var(--clr-primary-2);
     letter-spacing: -1px;
+    font-family: ;
     display: flex;
     align-items: center;
 }
