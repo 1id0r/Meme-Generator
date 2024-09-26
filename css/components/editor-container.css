@@ -4,7 +4,7 @@
     gap: 20px;
     align-items: start;
     padding: 20px;
-
+    background-color: #f7f7f7;
 }
 
 .canvas-container {
@@ -12,19 +12,18 @@
     justify-content: center;
     align-items: center;
 
-
-
+    box-shadow: 0 4px 8px rgba(255, 112, 2, 0.6);
 }
 
 .forms-control {
-
     display: flex;
     flex-direction: column;
     justify-content: baseline;
     align-items: center;
     gap: 10px;
     padding: 10px;
-    border: 5px solid #000000;
+    border: 3px solid var(--clr-primary-1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 input.meme-text {
@@ -36,14 +35,13 @@ input.meme-text {
 }
 
 .canvas {
-    border: 1px solid #ccc;
+    border: 3px solid var(--clr-primary-1);
 }
 
 .close-btn {
-    position: absolute;
+    position: fixed;
     top: 64px;
     left: 10px;
-
     background-color: transparent;
     border: none;
     font-size: 2.5rem;
@@ -80,8 +78,6 @@ input.meme-text {
 
 .color-picker {
     width: 50%;
-    margin: 2px;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
     color: white;
@@ -91,6 +87,7 @@ input.meme-text {
     width: auto;
     text-align: center;
     text-decoration: none;
+    border-radius: 5px;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -107,5 +104,21 @@ input.meme-text {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
         height: auto;
+    }
+
+    .canvas-container,
+    .forms-control {
+        width: 100%;
+        height: auto;
+    }
+
+    .canvas {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .forms-control {
+        justify-content: center;
     }
 }
