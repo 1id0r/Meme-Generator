@@ -1,4 +1,4 @@
-@media (max-width: 640px) {
+@media (max-width: 840px) {
     .main-nav {
         position: fixed;
         background-color: var(--clr-primary-1);
@@ -14,5 +14,18 @@
         gap: 5px;
     }
 
+    .editor-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        height: auto;
+    }
+}
 
+@media (max-width: 840px) {
+
+    .editor-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        height: auto;
+    }
 }

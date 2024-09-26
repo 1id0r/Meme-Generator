@@ -1,39 +1,39 @@
 .editor-container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
     padding: 20px;
-    width: 100%;
+
 }
 
 .canvas-container {
-    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
 }
 
 .forms-control {
+
     display: flex;
-    width: 50%;
     flex-direction: column;
     justify-content: baseline;
+    align-items: center;
     gap: 10px;
     padding: 10px;
-    margin-right: 100px;
-    margin-left: 10px;
     border: 5px solid #000000;
-
-
-
 }
 
-
 input.meme-text {
+    width: 100%;
     padding: 10px;
     font-size: 16px;
     box-sizing: border-box;
-    width: 80%;
-
-
+    width: auto;
 }
-
 
 .canvas {
     border: 1px solid #ccc;
@@ -66,44 +66,46 @@ input.meme-text {
     transform: scale(1.1);
 }
 
-.download-btn {
-    background-color: var(--clr-primary-1);
-    /* Soft orange color */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 10px;
-    /* Rounded corners */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.download-btn:hover {
-    background-color: #E76F51;
-    /* Darken on hover */
-}
-
-.download-btn:focus {
-    outline: none;
-}
-
-.decrease-btn,
-.increase-btn {
+.control-btn {
     width: 40px;
     padding: 10px;
     font-size: 16px;
+    border-radius: 50%;
     margin: 2px;
     border: none;
     background-color: var(--clr-primary-1);
     color: white;
-    border-radius: 5px;
     cursor: pointer;
 }
 
-.decrease-btn,
-.increase-btn button:hover {
-    background-color: #ff7553;
+.color-picker {
+    width: 50%;
+    margin: 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
 
+.download-btn {
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.control-btn:hover {
+    background-color: #ff4516;
+
+}
+
+@media (max-width: 840px) {
+
+    .editor-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        height: auto;
+    }
 }

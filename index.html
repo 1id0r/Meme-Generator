@@ -38,11 +38,16 @@
             <div class="forms-control">
                 <input type="text" class="meme-text" placeholder="enter your meme text"
                     oninput="onTextInput(this.value)">
-                <a href="#" onclick="downloadCanvas(this)" download>Download</a>
                 <input type="color" class="color-picker" value="#000000" onchange="onColorChange(this.value)">
-                <button class="increase-btn" onclick="increaseFontSize()">A+</button>
-                <button class="increase-btn" onclick="decreaseFontSize()">A-</button>
-                <button onclick="switchLine()">Switch Line</button>
+                <div class="controls">
+                    <button class="increase-btn control-btn " onclick="increaseFontSize()">A+</button>
+                    <button class="increase-btn control-btn " onclick="decreaseFontSize()">A-</button>
+
+                    <button class="switch-line-btn control-btn " onclick="switchLine()">↑↓</button>
+                    <button class="control-btn" onclick="moveLineUp()">⬆</button>
+                    <button class="control-btn" onclick="moveLineDown()">⬇</button>
+                </div>
+                <a href="#" onclick="downloadCanvas(this)" class="download-btn control-btn" download>Download</a>
             </div>
         </div>
     </div>

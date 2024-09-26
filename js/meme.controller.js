@@ -27,6 +27,7 @@ function renderMeme() {
       gCtx.lineWidth = 3
       gCtx.strokeStyle = 'black'
 
+      ///draw text
       gCtx.strokeText(line.txt, gElCanvas.width / 2, line.y)
       gCtx.fillText(line.txt, gElCanvas.width / 2, line.y)
 
@@ -121,4 +122,17 @@ function onCanvasClick(event) {
       renderMeme()
     }
   })
+}
+
+function moveLineUp() {
+  const meme = getMeme()
+  const line = meme.lines[meme.selectedLineIdx]
+  line.y -= 10
+  renderMeme()
+}
+function moveLineDown() {
+  const meme = getMeme()
+  const line = meme.lines[meme.selectedLineIdx]
+  line.y += 10
+  renderMeme()
 }
