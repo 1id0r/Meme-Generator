@@ -6,6 +6,7 @@ var gCtx
 function onInit() {
   gElCanvas = document.querySelector('canvas')
   gCtx = gElCanvas.getContext('2d')
+  gElCanvas.addEventListener('click', onCanvasClick)
   renderGallery()
   renderMeme()
 }
@@ -94,4 +95,30 @@ function switchLine() {
   document.querySelector('.meme-text').value =
     meme.lines[meme.selectedLineIdx].txt
   renderMeme()
+}
+
+function onCanvasClick(event) {
+  const meme = getMeme()
+  const rect = gElCanvas.getBoundingClientRect()
+  const x = event.clientX - rect.left
+  const y = event.clientY - rect.top
+
+  meme.lines.forEach((line, idx) => {
+    gCtx.font = `${line.size}px Impact`
+    const textWidth = gCtx.measureText(line.txt).width
+    const textHeight = line.size
+    const padding = 10
+
+    const xStart = gElCanvas.width / 2 - textWidth / 2 - padding
+    const xEnd = gElCanvas.width / 2 + textWidth / 2 + padding
+    const yStart = line.y - textHeight
+    const yEnd = line.y + padding
+
+    if (x >= xStart && x <= xEnd && y >= yStart && y <= yEnd) {
+      meme.selectedLineIdx = idx
+      document.querySelector('.meme-text').value = line.txt
+
+      renderMeme()
+    }
+  })
 }
