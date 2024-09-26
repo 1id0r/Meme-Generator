@@ -56,3 +56,17 @@ function onColorChange(color) {
   meme.lines[meme.selectedLineIdx - 1].color = color
   renderMeme()
 }
+
+function increaseFontSize() {
+  const meme = getMeme()
+  meme.lines[meme.selectedLineIdx - 1].size += 4
+  renderMeme()
+}
+
+function decreaseFontSize() {
+  const meme = getMeme()
+  if (meme.lines[meme.selectedLineIdx - 1].size > 10) {
+    meme.lines[meme.selectedLineIdx - 1].size -= 4
+  }
+  renderMeme()
+}

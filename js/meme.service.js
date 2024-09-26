@@ -12,7 +12,7 @@ const gImgs = [
 let gMeme = {
   selectedImgId: 1,
   selectedLineIdx: 1,
-  lines: [{ txt: 'hello', size: 20, color: 'red', x: 0, y: 50 }],
+  lines: [{ txt: 'hello', size: 30, color: 'black', x: 0, y: 50 }],
 }
 var gKeywordSearchCountMap = { funny: 12, cat: 16, baby: 2 }
 

@@ -29,7 +29,8 @@ input.meme-text {
     padding: 10px;
     font-size: 16px;
     box-sizing: border-box;
-    width: 100%;
+    width: 80%;
+
 
 }
 
@@ -86,4 +87,22 @@ input.meme-text {
 
 .download-btn:focus {
     outline: none;
+}
+
+.decrease-btn,
+.increase-btn {
+    width: 40px;
+    padding: 10px;
+    font-size: 16px;
+    margin: 2px;
+    border: none;
+    background-color: var(--clr-primary-1);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff7553;
+
 }
