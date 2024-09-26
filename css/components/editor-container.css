@@ -11,6 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 500px;
 
     box-shadow: 0 4px 8px rgba(255, 112, 2, 0.6);
 }
@@ -41,7 +42,7 @@ input.meme-text {
 .close-btn {
     position: fixed;
     top: 64px;
-    left: 10px;
+    left: 1px;
     background-color: transparent;
     border: none;
     font-size: 2.5rem;

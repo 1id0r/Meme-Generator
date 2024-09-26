@@ -31,7 +31,6 @@ function renderMeme() {
       gCtx.strokeText(line.txt, gElCanvas.width / 2, line.y)
       gCtx.fillText(line.txt, gElCanvas.width / 2, line.y)
 
-      // draw the frame
       if (idx === meme.selectedLineIdx) {
         const textWidth = gCtx.measureText(line.txt).width
         const textHeight = line.size
@@ -41,7 +40,6 @@ function renderMeme() {
         const width = textWidth + padding * 2
         const height = textHeight + padding
 
-        // Draw the frame (rectangle)
         gCtx.strokeStyle = 'grey'
         gCtx.lineWidth = 1
         gCtx.strokeRect(x, y, width, height)
@@ -134,5 +132,10 @@ function moveLineDown() {
   const meme = getMeme()
   const line = meme.lines[meme.selectedLineIdx]
   line.y += 10
+  renderMeme()
+}
+
+function onDeleteLine() {
+  deleteLine()
   renderMeme()
 }
