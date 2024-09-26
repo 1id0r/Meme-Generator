@@ -11,7 +11,7 @@ const gImgs = [
 
 let gMeme = {
   selectedImgId: 1,
-  selectedLineIdx: 1,
+  selectedLineIdx: 0,
   lines: [
     { txt: 'hello', size: 30, color: 'black', x: 0, y: 50 },
     { txt: 'hello', size: 30, color: 'black', x: 0, y: 400 },
