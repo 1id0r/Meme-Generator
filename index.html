@@ -29,8 +29,20 @@
         <nav class="search-bar">
             <form action=""></form>
         </nav>
-
     </section>
+    <div class="gallery-filter">
+        <div class="gallery-filter">
+            <form class="filterForm">
+                <label for="keywordInput">Filter by keyword:</label>
+                <input list="keywords" class="keywordInput" name="keywordInput" placeholder="Type a keyword">
+                <datalist id="keywords">
+                    <!-- Keywords will be dynamically added here -->
+                </datalist>
+                <button class="share-btn control-btn" type="submit">Search</button>
+                <button type="button" class=" share-btn control-btn clearFilter">Clear Filter</button>
+            </form>
+        </div>
+    </div>
 
     <section class="gallery-container">
         <div class="grid-container">
@@ -72,8 +84,10 @@
     <script src="./js/meme.controller.js"></script>
     <script src="./js/meme.service.js"></script>
     <script src="./js/gallery.controller.js"></script>
+    <script src="./js/filter.controller.js"></script>
     <script src="./js/utils.js"></script>
     <script src="./js/upload.service.js"></script>
+    <script src="./js/filter.service.js"></script>
 
 
 

@@ -7,6 +7,8 @@ function onInit() {
   gElCanvas = document.querySelector('canvas')
   gCtx = gElCanvas.getContext('2d')
   gElCanvas.addEventListener('click', onCanvasClick)
+  renderKeywords()
+  addEventListener()
   renderGallery()
   renderMeme()
 }
@@ -144,7 +146,6 @@ function onUploadImg(ev) {
   console.log('event', event)
   const canvasData = gElCanvas.toDataURL('image/jpeg')
 
-  // After a successful upload, allow the user to share on Facebook
   function onSuccess(uploadedImgUrl) {
     console.log('uploadedImgUrl:', uploadedImgUrl)
     const encodedUploadedImgUrl = encodeURIComponent(uploadedImgUrl)
@@ -160,6 +161,5 @@ function onUploadImg(ev) {
   uploadImg(canvasData, onSuccess)
 }
 function onUploadToFB(url) {
-  // console.log('url:', url)
   window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&t=${url}`)
 }

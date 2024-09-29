@@ -41,8 +41,8 @@ input.meme-text {
 
 .close-btn {
     position: fixed;
-    top: 64px;
-    left: 1px;
+    top: 114px;
+    right: 1px;
     background-color: transparent;
     border: none;
     font-size: 2.5rem;

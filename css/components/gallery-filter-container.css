@@ -1,0 +1,31 @@
+.gallery-filter {
+    margin-bottom: 20px;
+    display: flex;
+    ;
+}
+
+.gallery-filter form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.gallery-filter input,
+.gallery-filter button {
+    padding: 5px;
+    font-size: 14px;
+}
+
+button.clearFilter {
+    background-color: #ff0000;
+    opacity: 0.6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+button.clearFilter:hover {
+    background-color: #ff4500;
+}
