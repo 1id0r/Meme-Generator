@@ -1,11 +1,9 @@
 /* Setup */
 @import url('./setup/vars.css');
-@import url('./setup/mq.css');
 @import url('./setup/typography.css');
 
 /* BASICS */
 @import url('./basics/base.css');
-@import url('./basics/helpers.css');
 
 /* Components */
 @import url('./components/main-header.css');
@@ -13,3 +11,8 @@
 @import url('./components/logo.css');
 @import url('./components/gallery-container.css');
 @import url('./components/editor-container.css');
+@import url('./components/share-container.css');
+
+
+@import url('./setup/mq.css');
+@import url('./basics/helpers.css');

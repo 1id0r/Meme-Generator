@@ -84,7 +84,7 @@ input.meme-text {
     color: white;
 }
 
-.download-btn {
+.share-btn {
     width: auto;
     text-align: center;
     text-decoration: none;
@@ -97,29 +97,4 @@ input.meme-text {
 .control-btn:hover {
     background-color: #ff4516;
 
-}
-
-@media (max-width: 840px) {
-
-    .editor-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        height: auto;
-    }
-
-    .canvas-container,
-    .forms-control {
-        width: 100%;
-        height: auto;
-    }
-
-    .canvas {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-    }
-
-    .forms-control {
-        justify-content: center;
-    }
 }

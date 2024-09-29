@@ -56,8 +56,14 @@
                     <button class="control-btn" onclick="moveLineUp()">⬆</button>
                     <button class="control-btn" onclick="moveLineDown()">⬇</button>
                 </div>
-                <a href="#" onclick="downloadCanvas(this)" class="download-btn control-btn" download>Download</a>
+                <form action="" method="POST" enctype="multipart/form-data" onsubmit="onUploadImg(event)">
+                    <input name="img" id="imgData" type="hidden" />
+                    <button class="share-btn control-btn btn" type="submit">Upload to Cloudinary</button>
+                </form>
+                <div class="share-container hidden"></div>
+                <a href="#" onclick="downloadCanvas(this)" class="share-btn control-btn" download>Download</a>
             </div>
+
         </div>
     </div>
 
@@ -67,6 +73,8 @@
     <script src="./js/meme.service.js"></script>
     <script src="./js/gallery.controller.js"></script>
     <script src="./js/utils.js"></script>
+    <script src="./js/upload.service.js"></script>
+
 
 
 

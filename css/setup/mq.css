@@ -28,4 +28,20 @@
         grid-template-rows: auto auto;
         height: auto;
     }
+
+    .canvas-container,
+    .forms-control {
+        width: 100%;
+        height: auto;
+    }
+
+    .canvas {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .forms-control {
+        justify-content: center;
+    }
 }

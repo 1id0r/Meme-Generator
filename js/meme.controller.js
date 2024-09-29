@@ -116,10 +116,9 @@ function onCanvasClick(event) {
     if (x >= xStart && x <= xEnd && y >= yStart && y <= yEnd) {
       meme.selectedLineIdx = idx
       document.querySelector('.meme-text').value = line.txt
-
-      renderMeme()
     }
   })
+  renderMeme()
 }
 
 function moveLineUp() {
@@ -138,4 +137,29 @@ function moveLineDown() {
 function onDeleteLine() {
   deleteLine()
   renderMeme()
+}
+
+function onUploadImg(ev) {
+  ev.preventDefault()
+  console.log('event', event)
+  const canvasData = gElCanvas.toDataURL('image/jpeg')
+
+  // After a successful upload, allow the user to share on Facebook
+  function onSuccess(uploadedImgUrl) {
+    console.log('uploadedImgUrl:', uploadedImgUrl)
+    const encodedUploadedImgUrl = encodeURIComponent(uploadedImgUrl)
+    document.querySelector('.share-container').classList.remove('hidden')
+    document.querySelector('.share-container').innerHTML = `
+          <a href="${uploadedImgUrl}">Image Url</a>
+          <button class=" share-btn control-btn btn-facebook" target="_blank" onclick="onUploadToFB('${encodedUploadedImgUrl}')">
+              Share on Facebook  
+          </button>
+      `
+  }
+
+  uploadImg(canvasData, onSuccess)
+}
+function onUploadToFB(url) {
+  // console.log('url:', url)
+  window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&t=${url}`)
 }

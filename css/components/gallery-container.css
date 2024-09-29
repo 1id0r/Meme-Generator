@@ -8,3 +8,12 @@
     padding: 60px;
     margin: 0 auto;
 }
+
+.grid-container>img {
+    transition: 300ms;
+}
+
+.grid-container:has(img:hover)>img:not(:hover) {
+    scale: .9;
+    opacity: .6;
+}
